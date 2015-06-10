@@ -11,6 +11,7 @@
             <asp:BoundField DataField="LastName" HeaderText="Last Name" />
             <asp:BoundField DataField="FirstMidName" HeaderText="First Name" />
             <asp:BoundField DataField="EnrollmentDate" HeaderText="Enrollment Date" DataFormatString="{0:MM-dd-yyyy}" />
+            <asp:HyperLinkField HeaderText="Edit" Text="Edit" NavigateUrl="~/editStudent.aspx" DataNavigateUrlFields="StudentID" DataNavigateUrlFormatString="editStudent.aspx?StudentID={0}" />
             <asp:CommandField HeaderText="Delete" DeleteText="Delete" ShowDeleteButton="true" />
         </Columns>
     </asp:GridView>

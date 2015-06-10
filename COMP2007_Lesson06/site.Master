@@ -18,7 +18,7 @@
         <a href="default.aspx" class="navbar-brand">Contoso University</a>
         <ul class="nav navbar-nav">
             <li><a href="departments.aspx">Departments</a></li>
-            <li><a href="courses.asp">Courses</a></li>
+            <li><a href="courses.aspx">Courses</a></li>
             <li><a href="students.aspx">Students</a></li>
         </ul>
     </nav>
