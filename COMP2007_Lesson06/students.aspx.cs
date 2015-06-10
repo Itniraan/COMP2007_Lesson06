@@ -36,5 +36,29 @@ namespace COMP2007_Lesson06
                 grdStudents.DataBind();
             }
         }
+
+        protected void grdStudents_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            // Store which row was clicked
+            Int32 selectedRow = e.RowIndex;
+
+            // Get the selected StudentID using the grid's Data Key collection
+            Int32 StudentID = Convert.ToInt32(grdStudents.DataKeys[selectedRow].Values["StudentID"]);
+
+            // Use Enity Framework to remove the selected student from the DB
+            using (comp2007Entities db = new comp2007Entities())
+            {
+                Student s = (from objS in db.Students
+                             where objS.StudentID == StudentID
+                             select objS).FirstOrDefault(); // Using First would get an error if no data comes back, FirstOrDefault won't throw an error
+
+                // Do the delete
+                db.Students.Remove(s);
+                db.SaveChanges();
+            }
+
+            // Refresh the grid
+            GetStudents();
+        }
     }
 }
