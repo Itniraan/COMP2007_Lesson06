@@ -60,5 +60,6 @@ namespace COMP2007_Lesson06
             // Refresh the grid
             GetDepartments();
         }
+
     }
 }

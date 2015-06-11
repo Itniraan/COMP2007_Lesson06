@@ -31,6 +31,15 @@ namespace COMP2007_Lesson06 {
         protected global::System.Web.UI.WebControls.TextBox txtBudget;
         
         /// <summary>
+        /// RangeValidatorBudget control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidatorBudget;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

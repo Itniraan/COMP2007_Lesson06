@@ -12,6 +12,7 @@
     <fieldset>
         <label for="txtBudget" class="col-sm-2">Budget: </label>
         <asp:TextBox ID="txtBudget" runat="server" required="true" MaxLength="50" />
+        <asp:RangeValidator ID="RangeValidatorBudget" runat="server" ErrorMessage="Budget must be between 0 and 10,000,000" ControlToValidate="txtBudget" MinimumValue="0" MaximumValue="10000000" CssClass="label label-danger" Display="Dynamic"></asp:RangeValidator>
     </fieldset>
 
     <div class="col-sm-offset-2">
