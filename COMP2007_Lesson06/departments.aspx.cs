@@ -42,7 +42,7 @@ namespace COMP2007_Lesson06
             // Store which row was clicked
             Int32 selectedRow = e.RowIndex;
 
-            // Get the selected StudentID using the grid's Data Key collection
+            // Get the selected DepartmentID using the grid's Data Key collection
             Int32 DepartmentID = Convert.ToInt32(grdDepartments.DataKeys[selectedRow].Values["DepartmentID"]);
 
             // Use Enity Framework to remove the selected student from the DB
